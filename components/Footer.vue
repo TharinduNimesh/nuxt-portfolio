@@ -70,7 +70,7 @@
       </div>
     </div>
     <div
-      class="w-full order-5 py-3 px-8 flex flex-col lg:flex-row justify-center lg:justify-between text-sm"
+      class="w-full order-5 py-3 px-8 flex flex-col lg:flex-row items-center lg:justify-between text-sm"
     >
       <p>
         Design And Developed By <span class="font-bold">Tharindu Nimesh</span>.
