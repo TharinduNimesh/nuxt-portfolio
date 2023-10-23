@@ -13,7 +13,7 @@
         </p>
       </div>
       <div
-        class="w-full sm:w-1/2 md:w-1/2 lg:w-1/5 flex flex-col gap-3 px-3 md:order-3 lg:order-2"
+        class="w-1/2 md:w-1/2 lg:w-1/5 flex flex-col gap-3 px-3 md:order-3 lg:order-2"
       >
         <h3 class="font-bold text-lg">My Services</h3>
         <div class="flex items-start flex-col pl-5 gap-1">
@@ -25,7 +25,7 @@
         </div>
       </div>
       <div
-        class="w-full sm:w-1/2 md:w-1/2 lg:w-1/5 flex flex-col gap-3 px-3 md:order-4 lg:order-3"
+        class="w-1/2 md:w-1/2 lg:w-1/5 flex flex-col gap-3 px-3 md:order-4 lg:order-3"
       >
         <h3 class="font-bold text-lg">Recent Blogs</h3>
         <div class="flex items-start flex-col pl-5 gap-1">
@@ -70,7 +70,7 @@
       </div>
     </div>
     <div
-      class="w-full order-5 py-3 px-8 flex justify-center lg:justify-between text-sm"
+      class="w-full order-5 py-3 px-8 flex flex-col lg:flex-row justify-center lg:justify-between text-sm"
     >
       <p>
         Design And Developed By <span class="font-bold">Tharindu Nimesh</span>.
