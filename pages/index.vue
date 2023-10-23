@@ -8,12 +8,16 @@
   >
     <loading-screen :is-dark="isDark" :is-loading="isLoading" />
     <home-header :is-dark="isDark" :show-background="headerBackground" />
-    <main
+    <div
       class="bg-repeat-y lg:bg-contain duration-300"
       :style="`background-image: url(/img/${theme}-bg.webp);`"
     >
-      <home-page :is-dark="isDark" />
-    </main>
+      <main>
+        <home-page :is-dark="isDark" />
+      </main>
+
+      <Footer :is-dark="isDark" />
+    </div>
 
     <toggle-theme :is-dark="isDark" @changeTheme="setTheme" />
   </div>

@@ -16,7 +16,7 @@
         />
       </div>
       <div
-        class="w-full lg:w-1/2 h-100 blue-line px-5 duration-300"
+        class="w-full lg:w-1/2 h-100 blue-line md:px-5 duration-300"
         :class="{
           'text-white': isDark,
         }"
