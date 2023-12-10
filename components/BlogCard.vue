@@ -1,10 +1,11 @@
 <template>
   <div
-    class="root relative w-full md:w-11/12 lg:w-4/5 flex justify-center lg:flex-col lg:mt-0 py-5 lg:h-80 rounded-lg mt-20 lg:left-6 shadow-md duration-300 backdrop-blur-md hover:shadow-lg hover:-translate-y-2"
+    class="root relative w-full border md:w-11/12 lg:w-4/5 flex justify-center lg:flex-col lg:mt-0 py-5 lg:h-80 rounded-lg mt-20 lg:left-6 shadow-md duration-300 backdrop-blur-md hover:shadow-lg hover:-translate-y-2"
     :class="{
-      'bg-dark hover:!bg-gray-950': isDark,
-      'bg-light hover:!bg-slate-50': !isDark,
+      'bg-dark hover:!bg-gray-950 border-b-dark': isDark,
+      'bg-light hover:!bg-slate-50 border-b-light': !isDark,
     }"
+    data-aos="fade-up"
   >
     <div
       class="-top-20 absolute w-3/4 md:w-1/2 h-60 lg:top-10 lg:w-2/5 xl:w-1/4 lg:-left-12 rounded-lg"

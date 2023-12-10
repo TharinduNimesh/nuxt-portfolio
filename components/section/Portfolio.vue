@@ -14,6 +14,7 @@
         :class="{
           'text-white': isDark,
         }"
+        data-aos="fade-right"
       >
         <p class="font-monteserrat-alt">
           <span class="text-2xl font-bold text-primary">M</span>y digital
@@ -45,6 +46,7 @@
       </div>
       <div
         class="w-full lg:w-1/2 flex justify-center items-center order-1 lg:order-2"
+        data-aos="fade-left"
       >
         <img src="/img/portfolio-man.png" class="w-2/3 primary-bounce" />
       </div>

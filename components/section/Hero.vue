@@ -10,6 +10,7 @@
           'text-gray-800': !isDark,
           'text-slate-100': isDark,
         }"
+        data-aos="zoom-in"
       >
         <div
           class="flex flex-col justify-center lg:block font-bold mb-5 duration-300"
@@ -39,6 +40,7 @@
     </div>
     <div
       class="w-full lg:w-1/2 h-full lg:min-h-screen mb-3 order-1 lg:order-2 flex justify-center items-center"
+      data-aos="zoom-in"
     >
       <NuxtImg
         provider="cloudinary"

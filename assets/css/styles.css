@@ -1,52 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates&display=swap");
 
 main {
-    scroll-padding: 80px;
+  scroll-padding: 80px;
 }
 
 :root {
-    --primary: #1a81ff;
-    --primary-gradient: linear-gradient(90deg, #5553ff, #1a81ff);
+  --primary: #1a81ff;
+  --primary-gradient: linear-gradient(90deg, #5553ff, #1a81ff);
 }
 
 section {
-    padding-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 ::-webkit-scrollbar {
-    width: 0;
-    background: #000;
+  width: 0;
+  background: #000;
 }
 
 .text-primary {
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .underline-primary {
-    position: relative;
+  position: relative;
 }
 
 .underline-primary::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 60%;
-    height: 2px;
-    background-image: var(--primary-gradient);
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60%;
+  height: 2px;
+  background-image: var(--primary-gradient);
 }
 
 .primary-bounce {
-    animation: bounce 3s infinite alternate;
+  animation: bounce 3s infinite alternate;
+}
+
+::-moz-selection {
+  background: #0053d945;
+}
+
+::selection {
+  background: #0053d945;
 }
 
 @keyframes bounce {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-20px);
-    }
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20px);
+  }
 }

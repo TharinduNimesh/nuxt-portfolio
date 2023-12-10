@@ -17,6 +17,10 @@ export default {
       fontFamily: {
         'monteserrat': ['Montserrat', 'sans-serif'],
         'monteserrat-alt': ['Montserrat Alternates', 'sans-serif'],
+      },
+      colors: {
+        'b-dark': '#323333',
+        'b-light': '#d6d6d6',
       }
     },
   },

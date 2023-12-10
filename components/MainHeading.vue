@@ -1,5 +1,5 @@
 <template>
-  <div class="py-3 mb-10 h-fit w-full">
+  <div class="py-3 mb-10 h-fit w-full" data-aos="fade-right">
     <div 
         class="px-10 relative h-fit w-fit"
         :class="{

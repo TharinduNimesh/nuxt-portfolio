@@ -1,10 +1,11 @@
 <template>
   <div
-    class="w-80 h-full p-5 rounded-lg shadow-md backdrop-blur duration-300 hover:-translate-y-4 hover:shadow-lg"
+    class="w-80 h-full p-5 rounded-lg border shadow-md backdrop-blur duration-300 hover:-translate-y-4 hover:shadow-lg"
     :class="{
-      'bg-dark hover:!bg-slate-950': isDark,
-      'bg-light hover:!bg-slate-50': !isDark,
+      'bg-dark hover:!bg-slate-950 border-b-dark': isDark,
+      'bg-light hover:!bg-slate-50 border-b-light': !isDark,
     }"
+    data-aos="fade-up"
   >
     <div class="w-full p-3 flex flex-col items-center">
       <div

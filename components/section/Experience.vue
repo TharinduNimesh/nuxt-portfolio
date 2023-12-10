@@ -15,6 +15,7 @@
           'text-white': isDark,
           'text-black': !isDark,
         }"
+        data-aos="fade-up"
       >
         <h3 class="text-[24px] font-bold mb-3 font-monteserrat-alt">
           Crafting Digital Experiences: {{ experience }} Years of Web Wizardry
@@ -39,8 +40,13 @@
       </div>
       <div class="w-full lg:w-1/2 px-3 md:px-10 flex items-center mt-4 lg:mt-0">
         <div
-          class="w-full px-5 pt-5 pb-10 rounded-lg bg-gray backdrop-blur shadow-md duration-300"
+          class="w-full px-5 pt-5 pb-10 border rounded-lg bg-gray backdrop-blur shadow-md duration-300"
           :style="`background-color: #${bgColor}`"
+          :class="{
+            'border-b-dark': isDark,
+            'border-b-light': !isDark,
+          }"
+          data-aos="fade-left"
         >
           <div class="flex flex-col">
             <h3
@@ -54,7 +60,7 @@
           </div>
           <progress-bar name="HTML & CSS" percentage="96" :is-dark="isDark" />
           <progress-bar name="Javascript" percentage="80" :is-dark="isDark" />
-          <progress-bar name="Vue JS" percentage="64" :is-dark="isDark" />
+          <progress-bar name="Nuxt JS" percentage="77" :is-dark="isDark" />
           <progress-bar name="Laravel" percentage="78" :is-dark="isDark" />
           <progress-bar name="Databases" percentage="93" :is-dark="isDark" />
           <progress-bar name="SEO" percentage="54" :is-dark="isDark" />

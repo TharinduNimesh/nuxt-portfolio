@@ -7,7 +7,10 @@
       :is-dark="isDark"
     />
     <div class="flex px-5">
-      <div class="w-1/2 justify-center items-center hidden lg:flex">
+      <div 
+        class="w-1/2 justify-center items-center hidden lg:flex"
+        data-aos="fade-up"  
+      >
         <NuxtImg
           provider="cloudinary"
           format="webp"
@@ -20,6 +23,7 @@
         :class="{
           'text-white': isDark,
         }"
+        data-aos="fade-left"
       >
         <p class="mb-5 font-monteserrat-alt">
           I'm <strong class="text-primary">Tharindu Nimesh</strong>, a
