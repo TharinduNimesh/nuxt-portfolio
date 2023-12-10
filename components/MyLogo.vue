@@ -4,21 +4,10 @@
       <img src="/img/logo.png" class="h-full object-cover" />
     </div>
     <h2 
-      class="text-xl font-bold self-center duration-300"
-      :class="{
-        'text-white': isDark,
-        'text-black': !isDark,
-      }"
+      class="text-xl font-bold self-center duration-300 text-black dark:text-white"
     >Tharindu</h2>
   </div>
 </template>
-
-<script>
-export default {
-  name: "MyLogo",
-  props: ["isDark"],
-};
-</script>
 
 <style>
 </style>

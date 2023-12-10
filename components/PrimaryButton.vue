@@ -1,17 +1,9 @@
 <template>
   <button
-    class="relative px-5 py-3 mx-3 duration-300 overflow-hidden rounded cursor-pointer flex justify-center items-center shadow-md hover:shadow-lg"
-    :class="{
-      'text-white': isDark,
-      'text-black': !isDark,
-    }"
+    class="relative px-5 py-3 mx-3 duration-300 overflow-hidden rounded cursor-pointer flex justify-center items-center shadow-md hover:shadow-lg text-black dark:text-white"
   >
     <div 
-        class="background absolute h-full w-full duration-300 img"
-        :class="{
-            'dark': isDark,
-            'light': !isDark,
-        }"
+        :class="`background absolute h-full w-full duration-300 img ${$colorMode.preference}`"
     ></div>
     <span class="relative">{{ text }}</span>
   </button>
@@ -20,7 +12,7 @@
 <script>
 export default {
   name: "PrimaryButton",
-  props: ["text", "isDark"],
+  props: ["text"],
 };
 </script>
 

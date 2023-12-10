@@ -4,7 +4,6 @@
       main-heading="About"
       sub-heading="Who Am I "
       last-symbol="?"
-      :is-dark="isDark"
     />
     <div class="flex px-5">
       <div 
@@ -19,10 +18,7 @@
         />
       </div>
       <div
-        class="w-full lg:w-1/2 h-100 blue-line md:px-5 duration-300"
-        :class="{
-          'text-white': isDark,
-        }"
+        class="w-full lg:w-1/2 h-100 blue-line md:px-5 duration-300 dark:text-white"
         data-aos="fade-left"
       >
         <p class="mb-5 font-monteserrat-alt">
@@ -54,26 +50,14 @@
           on cutting-edge web solutions. Together, let's code the future!
         </p>
         <div class="flex justify-center mt-5">
-          <primary-button text="Contact Me" :is-dark="isDark" />
+          <primary-button text="Contact Me" />
         </div>
       </div>
     </div>
   </section>
 </template>
 
-<script>
-export default {
-  name: "AboutSection",
-  props: ["isDark"],
-};
-</script>
-
 <style scoped>
-.man {
-  width: 100%;
-  max-width: 500px;
-}
-
 .blue-line {
   position: relative;
 }

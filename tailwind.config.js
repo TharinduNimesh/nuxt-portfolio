@@ -21,9 +21,12 @@ export default {
       colors: {
         'b-dark': '#323333',
         'b-light': '#d6d6d6',
+        'dark-primary': '#1f232cb4',
+        'light-primary': '#f5f8ffb4',
       }
     },
   },
+  darkMode: 'class',
   plugins: [],
 }
 

@@ -1,22 +1,20 @@
 <template>
   <section
     class="snap-start bg-cover bg-center duration-300 flex flex-col justify-center lg:flex-row pb-0"
-    :style="`background-image: url(/img/hero-${theme}.webp);`"
+    :style="`background-image: url(/img/hero-${$colorMode.preference}.webp);`"
   >
     <div class="w-full lg:w-1/2 mb-5 lg:mb-0 order-2 lg:order-1">
       <div
-        class="flex flex-col justify-center text-center lg:text-left h-full px-5 md:px-20 lg:px-0 lg:pl-20"
-        :class="{
-          'text-gray-800': !isDark,
-          'text-slate-100': isDark,
-        }"
+        class="flex flex-col justify-center text-center text-gray-800 dark:text-slate-100 lg:text-left h-full px-5 md:px-20 lg:px-0 lg:pl-20"
         data-aos="zoom-in"
       >
         <div
           class="flex flex-col justify-center lg:block font-bold mb-5 duration-300"
         >
-        <span class="self-center mr-4 text-lg font-monteserrat-alt">Hello, It's Me</span>
-          <div class="flex mt-3 self-center text-4xl lg:text-5xl ">
+          <span class="self-center mr-4 text-lg font-monteserrat-alt"
+            >Hello, It's Me</span
+          >
+          <div class="flex mt-3 self-center text-4xl lg:text-5xl">
             <img src="/img/T.png" class="w-10 lg:w-16" />
             <span class="text-primary self-end">harindu Nimesh</span>
           </div>
@@ -30,11 +28,7 @@
           my journey of tech excellence.
         </p>
         <div class="flex justify-center">
-          <primary-button
-            text="Save My Resume"
-            :is-dark="isDark"
-            class="mt-8"
-          />
+          <primary-button text="Save My Resume" class="mt-8" />
         </div>
       </div>
     </div>
@@ -53,27 +47,13 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: "Hero",
-  props: ["isDark"],
-  computed: {
-    theme() {
-      return this.isDark ? "dark" : "light";
-    },
-  },
-};
-</script>
-
-<style scoped>
-section {
-  min-height: 100vh;
-}
-</style>
-
 <style scoped>
 .man {
   max-width: 500px;
   height: auto;
+}
+
+section {
+  min-height: 100vh;
 }
 </style>

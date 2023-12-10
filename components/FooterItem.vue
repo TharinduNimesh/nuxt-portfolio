@@ -1,12 +1,8 @@
 <template>
   <NuxtLink
     :to="link"
-    class="flex gap-2 items-center text-sm duration-300 cursor-pointer"
-    :class="{
-        'text-gray-300 hover:text-white': isDark,
-        'text-gray-800 hover:text-black': !isDark,
-    }"
->
+    class="flex gap-2 items-center text-sm duration-300 cursor-pointer text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white"
+  >
     <IconArrow />
     <span class="font-bold">{{ name }}</span>
   </NuxtLink>
@@ -14,7 +10,7 @@
 
 <script>
 export default {
-    props: ["isDark", "name", "link"],
+  props: ["name", "link"],
 };
 </script>
 

@@ -3,17 +3,13 @@
     class="snap-start bg-cover bg-left-bottom duration-300 flex flex-col"
   >
     <main-heading
-      :is-dark="isDark"
       main-heading="Portfolio"
       sub-heading="What Have I Done "
       last-symbol="?"
     />
     <div class="flex flex-wrap">
       <div
-        class="w-full lg:w-1/2 px-4 md:px-10 lg:px-16 order-2 lg:order-1 duration-300"
-        :class="{
-          'text-white': isDark,
-        }"
+        class="w-full lg:w-1/2 px-4 md:px-10 lg:px-16 order-2 lg:order-1 duration-300 text-black dark:text-white"
         data-aos="fade-right"
       >
         <p class="font-monteserrat-alt">
@@ -37,11 +33,7 @@
           and imagination converge to shape the digital world.
         </p>
         <div class="w-full flex justify-center">
-          <primary-button
-            text="Visit My Github"
-            class="mt-5"
-            :is-dark="isDark"
-          />
+          <primary-button text="Visit My Github" class="mt-5" />
         </div>
       </div>
       <div
@@ -53,7 +45,6 @@
     </div>
     <div class="flex flex-wrap justify-center mt-20 px-5 gap-10">
       <project-card
-        :is-dark="isDark"
         title="Student Management System"
         :technologies="['HTML/ CSS', 'Laravel', 'MYSQL']"
         reference="https://github.com/TharinduNimesh/online-student-management-system"
@@ -68,7 +59,6 @@
       </project-card>
 
       <project-card
-        :is-dark="isDark"
         title="Employee Management System"
         :technologies="['C#', '.NET', 'MYSQL']"
         reference="https://github.com/TharinduNimesh/employee-management-system"
@@ -82,7 +72,6 @@
       </project-card>
 
       <project-card
-        :is-dark="isDark"
         title="Chatterbox"
         :technologies="['React Native', 'Laravel', 'MYSQL']"
         button="Available Soon"
@@ -90,25 +79,13 @@
         disabled="true"
       >
         <p>
-          Crafted Chatterbox, a social media app with React Native and laravel backend, fostering
-          connections and conversations across platforms.
+          Crafted Chatterbox, a social media app with React Native and laravel
+          backend, fostering connections and conversations across platforms.
         </p>
       </project-card>
     </div>
   </section>
 </template>
-
-<script>
-export default {
-  name: "Portfolio",
-  props: ["isDark"],
-  computed: {
-    theme() {
-      return this.isDark ? "dark" : "light";
-    },
-  },
-};
-</script>
 
 <style scoped>
 .primary-bounce {

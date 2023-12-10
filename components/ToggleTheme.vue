@@ -1,29 +1,22 @@
+<script setup>
+const color = useColorMode();
+
+function changeTheme() {
+  color.preference = color.preference === "light" ? "dark" : "light";
+}
+</script>
+
 <template>
   <div
-    class="fixed shadow-md"
-    :class="{
-      'bg-slate-900 shadow-gray-700': isDark,
-      'bg-slate-200': !isDark,
-    }"
+    class="fixed shadow-md bg-slate-200 dark:bg-slate-900"
   >
-    <div class="toggle cursor-pointer" @click="$emit('changeTheme')">
+    <div class="toggle cursor-pointer" @click="changeTheme">
       <div
-        class="img w-full h-full duration-300"
-        :class="{
-          light: !isDark,
-          dark: isDark,
-        }"
+        :class="`img w-full h-full duration-300 ${$colorMode.preference}`"
       ></div>
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: "ToggleTheme",
-  props: ["isDark"],
-};
-</script>
 
 <style scoped>
 .fixed {

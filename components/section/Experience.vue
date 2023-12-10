@@ -3,32 +3,27 @@
     class="snap-start bg-cover bg-left-bottom duration-300 flex flex-col"
   >
     <main-heading
-      :isDark="isDark"
       main-heading="Experience"
       sub-heading="What Can I Do "
       last-symbol="?"
     />
     <div class="flex flex-1 flex-wrap">
       <div
-        class="w-full lg:w-1/2 px-3 md:px-10 xl:px-24"
-        :class="{
-          'text-white': isDark,
-          'text-black': !isDark,
-        }"
+        class="w-full lg:w-1/2 px-3 md:px-10 xl:px-24 text-black dark:text-white"
         data-aos="fade-up"
       >
         <h3 class="text-[24px] font-bold mb-3 font-monteserrat-alt">
           Crafting Digital Experiences: {{ experience }} Years of Web Wizardry
         </h3>
         <p class="mb-3 font-monteserrat-alt">
-          <span class="text-2xl font-bold text-primary">W</span>ith
-          two captivating years of journeying through
-          the digital landscape, I've sculpted my mark as a web magician. From
-          mastering the fundamental intricacies of web development to conjuring
-          captivating user interfaces with Laravel, Vue.js, Tailwind, and
-          Bootstrap, my passion for pixel-perfect code runs deep. I've danced
-          with databases, both relational (MySQL) and NoSQL (MongoDB),
-          orchestrating data with finesse.
+          <span class="text-2xl font-bold text-primary">W</span>ith two
+          captivating years of journeying through the digital landscape, I've
+          sculpted my mark as a web magician. From mastering the fundamental
+          intricacies of web development to conjuring captivating user
+          interfaces with Laravel, Vue.js, Tailwind, and Bootstrap, my passion
+          for pixel-perfect code runs deep. I've danced with databases, both
+          relational (MySQL) and NoSQL (MongoDB), orchestrating data with
+          finesse.
         </p>
         <p class="mb-3 font-monteserrat-alt">
           Yet, my skills stretch beyond the web horizon. I've donned my mobile
@@ -40,92 +35,57 @@
       </div>
       <div class="w-full lg:w-1/2 px-3 md:px-10 flex items-center mt-4 lg:mt-0">
         <div
-          class="w-full px-5 pt-5 pb-10 border rounded-lg bg-gray backdrop-blur shadow-md duration-300"
+          class="w-full px-5 pt-5 pb-10 border border-b-light dark:border-b-dark rounded-lg bg-gray backdrop-blur shadow-md duration-300"
           :style="`background-color: #${bgColor}`"
-          :class="{
-            'border-b-dark': isDark,
-            'border-b-light': !isDark,
-          }"
           data-aos="fade-left"
         >
           <div class="flex flex-col">
             <h3
-              class="uppercase self-center text-xl font-bold font-monteserrat underline-primary duration-300"
-              :class="{
-                'text-white': isDark,
-              }"
+              class="uppercase self-center text-xl font-bold font-monteserrat underline-primary duration-300 dark:text-white"
             >
               My Proficiencies
             </h3>
           </div>
-          <progress-bar name="HTML & CSS" percentage="96" :is-dark="isDark" />
-          <progress-bar name="Javascript" percentage="80" :is-dark="isDark" />
-          <progress-bar name="Nuxt JS" percentage="77" :is-dark="isDark" />
-          <progress-bar name="Laravel" percentage="78" :is-dark="isDark" />
-          <progress-bar name="Databases" percentage="93" :is-dark="isDark" />
-          <progress-bar name="SEO" percentage="54" :is-dark="isDark" />
+          <progress-bar name="HTML & CSS" percentage="96" />
+          <progress-bar name="Javascript" percentage="80" />
+          <progress-bar name="Nuxt JS" percentage="77" />
+          <progress-bar name="Laravel" percentage="78" />
+          <progress-bar name="Databases" percentage="93" />
+          <progress-bar name="SEO" percentage="54" />
         </div>
       </div>
     </div>
-  </section>
 
-  <section
-    class="bg-cover bg-left-bottom duration-300 flex flex-col py-8"
-  >
-    <div class="flex flex-1 justify-center flex-wrap gap-8">
-      <skill-card
-        :is-dark="isDark"
-        skill="Crafting User Experiences"
-        image="frontend"
-      >
+    <div class="flex flex-1 justify-center flex-wrap gap-8 mt-10">
+      <skill-card skill="Crafting User Experiences" image="frontend">
         Experience the art of web basics and the power of Vue.js, where
         creativity meets functionality to build engaging and dynamic web
         interfaces.
       </skill-card>
 
-      <skill-card
-        :is-dark="isDark"
-        skill="Building the Digital Backbone"
-        image="backend"
-      >
+      <skill-card skill="Building the Digital Backbone" image="backend">
         Leverage the robustness of Laravel and Django to create efficient and
         scalable backend solutions that drive your web applications forward.
       </skill-card>
 
-      <skill-card
-        :is-dark="isDark"
-        skill="Data Design Mastery Unleashed"
-        image="database"
-      >
+      <skill-card skill="Data Design Mastery Unleashed" image="database">
         Molding data with finesse using MySQL and NoSQL databases, ensuring your
         applications store and retrieve information seamlessly.
       </skill-card>
 
-      <skill-card
-        :is-dark="isDark"
-        skill="Navigating the Mobile Realm"
-        image="mobile"
-      >
+      <skill-card skill="Navigating the Mobile Realm" image="mobile">
         Embark on an exciting mobile journey with Flutter and the React Native.
         Transform your ideas into captivating cross-platform apps that deeply
         engage and connect users.
       </skill-card>
 
-      <skill-card
-        :is-dark="isDark"
-        skill="Bridging the Digital Divide"
-        image="desktop"
-      >
+      <skill-card skill="Bridging the Digital Divide" image="desktop">
         Unleash the potential of Java Swing and Electron JS to develop desktop
         applications that bring user-friendly experiences to the desktop
         environment.
       </skill-card>
 
-      <skill-card
-        :is-dark="isDark"
-        skill="Embracing Lifelong Learning Ahead"
-        image="progress"
-      >
+      <skill-card skill="Embracing Lifelong Learning Ahead" image="progress">
         As the tech landscape evolves, I'm committed to continuous learning,
         exploring emerging technologies, and staying ahead in this ever-changing
         field.
@@ -137,13 +97,9 @@
 <script>
 export default {
   name: "ExperienceSection",
-  props: ["isDark"],
   computed: {
-    theme() {
-      return this.isDark ? "dark" : "light";
-    },
     bgColor() {
-      return this.isDark ? "1f2937ab" : "f5f8ffb9";
+      return useColorMode().value === "dark" ? "1f2937ab" : "f5f8ffb9";
     },
   },
   data() {
@@ -159,5 +115,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

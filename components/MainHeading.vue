@@ -1,16 +1,10 @@
 <template>
   <div class="py-3 mb-10 h-fit w-full" data-aos="fade-right">
-    <div 
-        class="px-10 relative h-fit w-fit"
-        :class="{
-            'text-gray-800': !isDark,
-            'text-white': isDark,
-        }"
-    >
-      <div class="main-heading duration-300">
+    <div class="px-10 relative h-fit w-fit text-gray-800 dark:text-white duration-300">
+      <div class="main-heading">
         {{ mainHeading }}
       </div>
-      <div class="sub-heading duration-300">
+      <div class="sub-heading">
         {{ subHeading }} <span class="text-primary">{{ lastSymbol }}</span>
       </div>
     </div>
@@ -20,7 +14,7 @@
 <script>
 export default {
   name: "MainHeading",
-  props: ["isDark", "mainHeading", "subHeading", "lastSymbol"],
+  props: ["mainHeading", "subHeading", "lastSymbol"],
 };
 </script>
 

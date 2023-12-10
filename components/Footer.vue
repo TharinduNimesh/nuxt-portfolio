@@ -5,7 +5,7 @@
   >
     <div class="w-full flex flex-wrap gap-y-5 lg:gap-y-0 p-10">
       <div class="w-full md:w-1/2 lg:w-1/4 flex flex-col gap-3 px-3 md:order-1">
-        <my-logo :is-dark="isDark" />
+        <my-logo />
         <p>
           I'm <span class="font-bold">Tharindu Nimesh</span>, a passionate
           student at the Java Institute For Advanced Technology (JIAT) based in
@@ -17,11 +17,11 @@
       >
         <h3 class="font-bold text-lg">My Services</h3>
         <div class="flex items-start flex-col pl-5 gap-1">
-          <footer-item :is-dark="isDark" name="Web Development" />
-          <footer-item :is-dark="isDark" name="Mobile Development" />
-          <footer-item :is-dark="isDark" name="UI/ UX Designing" />
-          <footer-item :is-dark="isDark" name="Database Designing" />
-          <footer-item :is-dark="isDark" name="SEO Optimizing" />
+          <footer-item name="Web Development" />
+          <footer-item name="Mobile Development" />
+          <footer-item name="UI/ UX Designing" />
+          <footer-item name="Database Designing" />
+          <footer-item name="SEO Optimizing" />
         </div>
       </div>
       <div
@@ -29,11 +29,11 @@
       >
         <h3 class="font-bold text-lg">Recent Blogs</h3>
         <div class="flex items-start flex-col pl-5 gap-1">
-          <footer-item :is-dark="isDark" name="Features Of Nuxt JS" />
-          <footer-item :is-dark="isDark" name="New JS Runtime | BUN" />
-          <footer-item :is-dark="isDark" name="Get Started With Laravel" />
-          <footer-item :is-dark="isDark" name="Project Management tips..." />
-          <footer-item :is-dark="isDark" name="First Year in software..." />
+          <footer-item name="Features Of Nuxt JS" />
+          <footer-item name="New JS Runtime | BUN" />
+          <footer-item name="Get Started With Laravel" />
+          <footer-item name="Project Management tips..." />
+          <footer-item name="First Year in software..." />
         </div>
       </div>
       <div
@@ -45,11 +45,7 @@
           <div class="w-full flex h-10 rounded">
             <input
               type="text"
-              class="w-2/3 border rounded-l outline-none px-3 bg-transparent"
-              :class="{
-                'border-gray-400 focus:border-gray-600': !isDark,
-                'border-gray-600 focus:border-gray-400': isDark,
-              }"
+              class="w-2/3 border rounded-l outline-none px-3 bg-transparent border-gray-400 focus:border-gray-600 dark:border-gray-600 dark:focus:border-gray-400"
               placeholder="Email Address"
             />
             <button
@@ -85,10 +81,9 @@
 
 <script>
 export default {
-  props: ["isDark"],
   computed: {
     bgClass() {
-      return this.isDark
+      return useColorMode().preference === "dark"
         ? "bg-dark-img bg-black text-gray-200"
         : "bg-light-img bg-white text-gray-900";
     },

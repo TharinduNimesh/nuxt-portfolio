@@ -1,14 +1,9 @@
 <template>
-  <section-hero :is-dark="isDark" />
-  <section-about :is-dark="isDark" />
-  <section-experience :is-dark="isDark"/>
-  <section-portfolio :is-dark="isDark" />
-  <section-blog :is-dark="isDark" />
+  <main>
+    <section-hero />
+    <section-about />
+    <section-experience />
+    <section-portfolio />
+    <section-blog />
+  </main>
 </template>
-
-<script>
-export default {
-    name: 'HomePage',
-    props: ['isDark'],
-};
-</script>

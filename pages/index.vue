@@ -1,25 +1,17 @@
 <template>
-  <div
-    class="cursor-default duration-300"
-    :class="{
-      'bg-gray-950': isDark,
-      'bg-slate-100': !isDark,
-    }"
-  >
-    <loading-screen :is-dark="isDark" :is-loading="isLoading" />
-    <home-header :is-dark="isDark" :show-background="headerBackground" />
+  <div class="cursor-default duration-300 bg-slate-100 dark:bg-gray-950">
+    <loading-screen :is-loading="isLoading" />
+    <home-header :show-background="headerBackground" />
     <div
       class="bg-repeat-y lg:bg-contain duration-300"
-      :style="`background-image: url(/img/${theme}-bg.webp);`"
+      :style="`background-image: url(/img/${$colorMode.preference}-bg.webp);`"
     >
-      <main>
-        <home-page :is-dark="isDark" />
-      </main>
+      <home-page />
 
-      <Footer :is-dark="isDark" />
+      <Footer />
     </div>
 
-    <toggle-theme :is-dark="isDark" @changeTheme="setTheme" />
+    <toggle-theme />
   </div>
 </template>
 
@@ -46,7 +38,6 @@ export default {
   name: "App",
   data() {
     return {
-      isDark: false,
       isLoading: true,
       headerBackground: false,
     };
@@ -58,15 +49,6 @@ export default {
   methods: {
     setHeaderBackground(e) {
       this.headerBackground = window.scrollY > 100 ? true : false;
-    },
-    setTheme() {
-      this.isDark = !this.isDark;
-      localStorage.setItem("theme", this.isDark ? "dark" : "light");
-    },
-  },
-  computed: {
-    theme() {
-      return this.isDark ? "dark" : "light";
     },
   },
 };

@@ -13,6 +13,6 @@
 <script>
 export default {
     name: 'LoadingScreen',
-    props: ['isDark', 'isLoading'],
+    props: ['isLoading'],
 }
 </script>

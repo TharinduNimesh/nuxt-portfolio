@@ -3,19 +3,18 @@
     <header
       class="w-full h-16 rounded-xl flex justify-between items-center px-5 duration-300 backdrop-blur-md"
       :class="{
-        'bg-dark shadow-slate-800': isDark && showBackground,
+        'bg-dark': isDark && showBackground,
         'bg-light': !isDark && showBackground,
-        'shadow-md' : showBackground,
+        'shadow-md': showBackground,
       }"
     >
-      <my-logo :isDark="isDark"/>
+      <my-logo />
       <nav class="p-0 m-0 hidden lg:flex justify-center">
         <nav-item
           v-for="(item, index) in items"
           :key="item.name"
           :name="item.name"
           :path="item.path"
-          :isDark="isDark"
           :isActive="index === activePage"
         />
       </nav>
@@ -29,42 +28,41 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "HomeHeader",
-  props: ["isDark", "scrollTop", "showBackground"],
-  data() {
-    return {
-      activePage: 0,
-      items: [
-        {
-          path: "#",
-          name: "Home",
-        },
-        {
-          path: "#",
-          name: "About",
-        },
-        {
-          path: '#',
-          name: 'Experience'
-        },
-        {
-          path: '#',
-          name: 'Portfolio'
-        },
-        {
-          path: "#",
-          name: "Insights",
-        },
-        {
-          path: "#",
-          name: "Contact",
-        },
-      ],
-    };
+<script setup>
+defineProps(["scrollTop", "showBackground"]);
+const color = useColorMode();
+
+const items = [
+  {
+    path: "#",
+    name: "Home",
   },
-};
+  {
+    path: "#",
+    name: "About",
+  },
+  {
+    path: "#",
+    name: "Experience",
+  },
+  {
+    path: "#",
+    name: "Portfolio",
+  },
+  {
+    path: "#",
+    name: "Insights",
+  },
+  {
+    path: "#",
+    name: "Contact",
+  },
+];
+
+const isDark = computed(() => {
+  return color.preference === "dark";
+})
+const activePage = ref(0);
 </script>
 
 <style scoped>

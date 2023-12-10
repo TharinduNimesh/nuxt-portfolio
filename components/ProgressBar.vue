@@ -1,28 +1,13 @@
 <template>
-  <div class="w-full mt-5 duration-300">
-    <p 
-        class="ml-4 font-monteserrat-alt text-sm duration-300"
-        :class="{
-            'text-white': isDark,
-        }"    
-    >{{ name }}</p>
-    <div
-      class="w-full h-5 rounded-xl duration-300"
-      :class="{
-        'bg-black': isDark,
-        'bg-white': !isDark,
-      }"
-    >
+  <div class="w-full mt-5 duration-300 text-black dark:text-white">
+    <p class="ml-4 font-monteserrat-alt text-sm duration-300">{{ name }}</p>
+    <div class="w-full h-5 rounded-xl duration-300">
       <div
-        class="relative h-full rounded-xl "
+        class="relative h-full rounded-xl"
         :style="`width: ${percentage}%; background-image: var(--primary-gradient);`"
       >
-        <span 
-            class="absolute -right-3 -top-full duration-300"
-            :class="{
-                'text-white': isDark,
-            }">
-            {{ percentage }}%
+        <span class="absolute -right-3 -top-full duration-300">
+          {{ percentage }}%
         </span>
       </div>
     </div>
@@ -32,9 +17,8 @@
 <script>
 export default {
   name: "ProgressBar",
-  props: ["isDark", "percentage", "name"],
+  props: ["percentage", "name"],
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

@@ -1,10 +1,6 @@
 <template>
   <div
-    class="root relative w-full border md:w-11/12 lg:w-4/5 flex justify-center lg:flex-col lg:mt-0 py-5 lg:h-80 rounded-lg mt-20 lg:left-6 shadow-md duration-300 backdrop-blur-md hover:shadow-lg hover:-translate-y-2"
-    :class="{
-      'bg-dark hover:!bg-gray-950 border-b-dark': isDark,
-      'bg-light hover:!bg-slate-50 border-b-light': !isDark,
-    }"
+    class="root relative w-full bg-light-primary dark:bg-dark-primary border border-b-light dark:border-b-dark md:w-11/12 lg:w-4/5 flex justify-center lg:flex-col lg:mt-0 py-5 lg:h-80 rounded-lg mt-20 lg:left-6 shadow-md duration-300 backdrop-blur-md hover:shadow-lg hover:-translate-y-2"
     data-aos="fade-up"
   >
     <div
@@ -22,25 +18,18 @@
       <div>
         <p class="font-bold text-gray-500">{{ publishedAt }}</p>
         <h2
-          class="text-xl font-bold font-monteserrat duration-300"
-          :class="{
-            'text-white': isDark,
-          }"
+          class="text-xl font-bold font-monteserrat duration-300 text-black dark:text-white"
         >
           {{ title }}
         </h2>
         <p
-          class="font-monteserrat-alt mt-2 duration-300"
-          :class="{
-            'text-gray-400': isDark,
-            'text-gray-600': !isDark,
-          }"
+          class="font-monteserrat-alt mt-2 duration-300 text-gray-600 dark:text-gray-400"
         >
           <slot></slot>
           <span class="text-primary text-lg font-bold">...</span>
         </p>
         <div class="flex justify-center mt-5">
-          <primary-button text="Read More" :is-dark="isDark" class="lg:mt-5" />
+          <primary-button text="Read More" class="lg:mt-5" />
         </div>
       </div>
     </div>
@@ -48,21 +37,13 @@
 </template>
 
 <script>
-
 export default {
   name: "BlogCard",
-  props: ["isDark", "publishedAt", "title", "image"],
+  props: ["publishedAt", "title", "image"],
 };
 </script>
 
 <style scoped>
-.bg-light {
-  background-color: #f5f8ffb4;
-}
-
-.bg-dark {
-  background-color: #1f232cb4;
-}
 .root:hover .blog-img {
   transform: scale(1.1);
 }

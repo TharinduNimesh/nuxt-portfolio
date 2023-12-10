@@ -1,10 +1,8 @@
 <template>
   <a
     :href="path"
-    class="mx-5 duration-300 cursor-pointer"
+    class="mx-5 duration-300 cursor-pointer text-gray-600 dark:text-slate-300"
     :class="{
-      'text-gray-600': !isDark,
-      'text-slate-300': isDark,
       active: isActive,
     }"
     >{{ name }}</a
@@ -14,7 +12,7 @@
 <script>
 export default {
   name: "NavItem",
-  props: ["path", "name", "isDark", "isActive"],
+  props: ["path", "name", "isActive"],
 };
 </script>
 
