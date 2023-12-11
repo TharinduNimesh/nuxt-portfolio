@@ -6,7 +6,7 @@
     <div class="w-100 h-60 rounded overflow-hidden">
       <img :src="`/img/projects/${image}`" class="duration-300 object-cover" />
     </div>
-    <div class="w-100 p-4 dark:text-white">
+    <div class="w-100 p-4 text-black dark:text-white">
       <h2 class="text-xl font-bold font-monteserrat">
         {{ title }}
       </h2>

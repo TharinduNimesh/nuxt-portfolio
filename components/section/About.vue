@@ -18,7 +18,7 @@
         />
       </div>
       <div
-        class="w-full lg:w-1/2 h-100 blue-line md:px-5 duration-300 dark:text-white"
+        class="w-full lg:w-1/2 h-100 blue-line md:px-5 duration-300 text-black dark:text-white"
         data-aos="fade-left"
       >
         <p class="mb-5 font-monteserrat-alt">
