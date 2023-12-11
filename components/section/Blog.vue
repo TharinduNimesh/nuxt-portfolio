@@ -33,7 +33,8 @@
         Advanced Technology), I embarked on this
       </blog-card>
     </div>
+    <div class="w-full flex justify-center mt-5">
+      <primary-button text="Visit My Blog" />
+    </div>
   </section>
 </template>
-
-<style></style>

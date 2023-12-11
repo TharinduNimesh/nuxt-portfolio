@@ -56,7 +56,7 @@
       </div>
     </div>
 
-    <div class="flex flex-1 justify-center flex-wrap gap-8 mt-10">
+    <div class="flex flex-1 justify-center flex-wrap gap-8 mt-14">
       <skill-card skill="Crafting User Experiences" image="frontend">
         Experience the art of web basics and the power of Vue.js, where
         creativity meets functionality to build engaging and dynamic web

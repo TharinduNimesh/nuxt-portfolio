@@ -1,10 +1,9 @@
 <template>
   <NuxtLink
     :to="link"
-    class="flex gap-2 items-center text-sm duration-300 cursor-pointer text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white"
+    class="text-gray-500 hover:text-gray-600 dark:hover:text-gray-400 duration-300 cursor-pointer"
   >
-    <IconArrow />
-    <span class="font-bold">{{ name }}</span>
+    {{ name }}
   </NuxtLink>
 </template>
 
